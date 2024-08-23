@@ -1,0 +1,22 @@
+{%extends "layout.html"%}
+
+  {%if message%}
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> {{message}}
+  </div>
+  {%endif%}
+  
+  {%block main%}
+    <h1>NEW ITEM</h1>
+      <form action="/add" method='post' class="form-addItem">
+        <label for="productName">Product</label>
+        <input type="text" name="productName">  
+        <label for="productCategory">Category</label>
+        <input type="text" name="productCategory">
+        <label for="productImage">Image</label>
+        <input type="file" name="productImage">
+        <label for="productDescription">Description</label>
+        <input type="text" name="productDescription">
+        <button class="add-btn" type="submit">enviar</button>
+      </form>
+  {%endblock%}

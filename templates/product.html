@@ -1,0 +1,9 @@
+{%extends "layout.html" %}
+
+{%block main%}
+  <div class="product-card">
+    <h1>{{ produto[0]['name'] }}</h1>
+    <p>{{ produto[0]['description'] }}</p>
+  </div>
+    <a class="voltar-lista" href="/">Voltar à lista de produtos</a>
+{%endblock%}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/login.css">
+  <title>Log in</title>
+</head>
+
+<body>
+  {%if message%}
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> {{message}}
+  </div>
+  {%endif%}
+  <div class="main-login">
+    <div class = "left-login">
+      <h1>Vamos empilhar?</h1>
+      <img class = "left-login-image" src = "../static/homemcomcaixas.svg" alt="homemcomcaixas">
+    </div>
+    <div class = "right-login">
+      <div class = "card-login">
+        <h1>LOGIN</h1>
+
+        <form action = "/login" class="login-form" method="post">
+
+          <div class = "textfield">
+            <label for="email">E-mail</label>
+            <input name="email" type="text" placeholder="Email" autocomplete="off" autofocus>
+          </div>
+          <div class = "textfield">
+            <label for="password">Password</label>
+            <input name="password" type="password" placeholder="Password">
+          </div>
+          <button class="btn-login" type="submit">Log In</button>
+
+        </form>
+
+      </div>
+      <div class="login-to-register">
+        <p>First time here? go to <a class = "login-to-register-link" href="/register">register</a></p>
+      </div>
+    </div>
+  </div>
+  </body>
+
+</html>

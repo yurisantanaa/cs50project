@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block main%}
+    <div class="page">
+        {%for produto in produtos%}
+        <div class='card' onclick = location.href="{{ url_for('produto', id=produto['productId']) }}">
+                <h1>{{produto['name']}}</h1>
+                <h2>{{produto['category']}}</h2>
+        </div>
+            {%endfor%}    
+    </div>
+        {% endblock %}

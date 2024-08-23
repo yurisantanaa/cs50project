@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "noto sans";
+  font-weight: 800;
+}
+
+/* body{
+  font-family: "noto sans";
+} */
+
+nav{
+  text-decoration: none;
+  background: #201b2c;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo{
+  color: #00ff88;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+.logo-link{
+  text-decoration: none;
+  outline: none;
+  color: #00ff88;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a{
+  color: #00ff88;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a.active,a:hover{
+  background:#514869;
+  transition: .5s;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: #00ff88;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+
+main{
+  background: black;
+  background-size: cover;
+  height: calc(100vh - 80px);
+
+}
+
+@media (max-width:952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width:858){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li{
+    display: block;
+  }
+  nav ul li a{
+    font-size: 20px;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #00ff88;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.form-addItem{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-addItem > label{
+  color:white;
+  margin: 3px;
+  margin-left: 25%;
+}
+
+.form-addItem > input{
+  margin-left: 25%;
+  border-radius: 5px;
+  background: #514869;
+  border: none;
+  padding: 10px;
+  outline: none;
+  width: 50%;
+  color: #00ff88;
+}
+
+.add-btn{
+  font-size: large;
+  width: 50%;
+  padding: 16px 0px;
+  margin: 25px;
+  margin-left: 25%;
+  border-radius:8px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #2b134b;
+  background: #00ff88;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.card > h1{
+  color:aquamarine;
+}
+
+.card > h2{
+  color: aquamarine;
+}
+
+.card{
+  background-color: #514869;
+  padding: 50px;
+  border-radius: 20px;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-top: 50px;
+  box-shadow: -3px -3px #00ff88;
+  cursor: pointer;
+}
+
+.page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.card > a{
+  text-decoration: none;
+  color: #00ff88;
+  width: 100%;
+}
+
+.product-card{
+  color: aqua;
+  text-decoration: none;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2f2841;
+  margin: auto;
+  border-radius: 5%;
+  box-shadow: 0 10px 40px #00000056;
+}
+
+.voltar-lista{
+  text-decoration: none;
+  color: gray;
+  text-align: end;
+}

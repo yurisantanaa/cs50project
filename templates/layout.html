@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8">
+    <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>inventory Manager</title>
+  </head>
+
+  <body>
+      {%if session['user_id']%}
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"> <a class ="logo-link" href="/"> Inventory Manager </a></label>
+        <ul>
+          <li> <a  href="/add"> Add Item </a> </li>
+          <li> <a href="/logout"> logout </a> </li>
+        </ul>
+        {%else%}
+        <nav>
+          <label class="logo">Inventory Manager</label>
+          <ul>
+            <li> <a href="/login"> login </a> </li>
+            <li> <a href="/register">register</a> </li>
+          </ul>
+        </nav>
+        {%endif%}
+      <main class="main">
+        {%block main%}{%endblock%}
+      </main>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    <div>
+      {%block content%}
+      {% endblock %}
+    </div>
+
+  </body>
+
+  <!-- <footer>
+    <p>&copy; 2024 yuri santana for CS50</p>
+  </footer> -->
+</html>

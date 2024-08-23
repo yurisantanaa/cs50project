@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/register.css">
+  <title>register</title>
+</head>
+<body>
+  {%if message%}
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> {{message}}
+  </div>
+  {%endif%}
+  <div class="main-register">
+    <div class="left-register">
+      <h1>Seja bem vindo!</h1>
+      <img class = "left-register-image" src="../static/homemcomtablet.svg" alt="homemcomtablet">
+    </div>
+    <div class="right-register">
+      <div class="card-register">
+        <h1>Register</h1>
+        <div class="form-register"></div>
+          <form action=" /register" method="post">
+            <div class="textfield">
+              <label for="username"></label>
+              <input type text="text" name="username" placeholder="Username" autocomplete="off" autofocus>
+            </div>
+
+            <div class="textfield">
+              <label for="email"></label>
+              <input type="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="textfield">
+              <label for="password"></label>
+              <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <div class="textfield">
+              <label for="confirmation"></label>
+              <input type="password" name="confirmation" placeholder="Confirm Password">
+            </div>
+
+            <button class="btn-register" type="submit">register</button>
+          </form>
+        
+      </div>
+      <div class="register-to-login">
+        <p>already have an account? <a href="/login" class="register-to-login-link">login</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
